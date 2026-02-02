@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Inventory</title>
+  <script type="module" crossorigin src="/assets/index-9oBhrx4J.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index--tSH0na7.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Vehicle Inventory Management</h1>
+
+        <div class="card">
+            <h2 id="formTitle">Add New Vehicle</h2>
+            <form id="vehicleForm">
+                <input type="hidden" id="vehicleId" name="vehicleId">
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select id="type" name="type">
+                        <option value="Car">Car</option>
+                        <option value="Bike">Bike</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="make">Make:</label>
+                    <input type="text" id="make" name="make" required>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model:</label>
+                    <input type="text" id="model" name="model" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+
+                <!-- Specific Fields -->
+                <div id="carFields" class="specific-fields">
+                    <div class="form-group">
+                        <label for="numDoors">Number of Doors:</label>
+                        <input type="number" id="numDoors" name="numDoors">
+                    </div>
+                </div>
+
+                <div id="bikeFields" class="specific-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="hasSideCar">Has Sidecar:</label>
+                        <input type="checkbox" id="hasSideCar" name="hasSideCar">
+                    </div>
+                </div>
+
+                <button type="submit">Add Vehicle</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Inventory List</h2>
+            <div id="vehicleList" class="vehicle-list">
+                <!-- Vehicles will be populated here -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
